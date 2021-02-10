@@ -10,6 +10,7 @@ import java.net.URL;
 public class Parser {
     public static void main(String[] args) throws IOException {
 
+
         String url = "https://www.marathonbet.ru/su/popular/Football+-+11?interval=ALL_TIME";
 
         Document page = getPage(url);
