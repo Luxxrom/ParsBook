@@ -15,10 +15,15 @@ public class Parser {
         Document page = getPage(url);
 
         Element tableTitle = page.select("table[class=coupon-row-item coupone-labels]").first();
+
+        Element nameFirst = tableTitle.select("th[class=first ]").first();
+        System.out.println(nameFirst.text());
+
         Elements names = tableTitle.select("th[class=coupone coupone-width-10]");
 
         for (Element name : names) {
-            System.out.print(name);
+            Element nameShort = name.select("span[class=hint]").first();
+            System.out.println(nameShort.text());
         }
 
     }
